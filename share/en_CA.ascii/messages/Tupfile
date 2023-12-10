@@ -1,0 +1,4 @@
+include_rules
+DIR=/usr/share/locale/en_CA.ascii/messages/
+
+: foreach *.msg |> !gencat |> $(DIST)$(DIR)/%B.cat

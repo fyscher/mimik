@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export LANG="en_CA.ascii"
+export NLSPATH=":%N.cat:/usr/share/locale/%L/messages/%N.cat:/usr/share/locale/%L/messages/%N:/usr/share/locale/%L/LC_MESSAGES/%N.cat:/usr/share/locale/%L/LC_MESSAGES/%N"
+export PATH="/bin/:/usr/bin:/usr/local/bin"
+export ROOTPATH="/bin/:/usr/bin:/sbin/:/usr/sbin/:/usr/local/bin:/usr/local/sbin/"
+export SHELL="/bin/sh"
+export TMPDIR="/tmp/"
+export EDITOR="/bin/vi"
+export PAGER="/bin/more"

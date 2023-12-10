@@ -1,0 +1,28 @@
+# Optimization
+# OPT:=-O2
+OPT:=-Os -s
+
+
+# C99
+CFLAGS+=-Wall -Wextra -std=c99 $(OPT)
+
+# GCC
+# CC:=gcc
+
+# Clang / LLVM
+CC:=clang
+CFLAGS+=-fuse-ld=lld
+
+
+# Dirs
+DIST:=$(TUP_CWD)/dist/
+
+
+# Rules
+!ccld   = |> $(CC) $(CFLAGS) -o %o %f |>
+!fold   = |> fold -s -w 80 %f > %o    |>
+!comp   = |> compress -kc  %f > %o    |>
+!gencat = |> gencat %o %f             |>
+!exmv   = |> install -Dm755 %f %o     |>
+
+.gitignore
