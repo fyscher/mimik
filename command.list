@@ -162,6 +162,10 @@ git
 
 sync
 
+uuid
+
+hostname
+
 tup dialect
 compiler suite
 package manager

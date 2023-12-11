@@ -1,8 +1,8 @@
-#ifndef __BIN_TEE_CONF_H__
-#define __BIN_TEE_CONF_H__
+#ifndef __USR_BIN_TEE_CONF_H__
+#define __USR_BIN_TEE_CONF_H__
 
 // Default display name
-#define DEFAULT_SELF "/bin/tee"
+#define DEFAULT_SELF "/usr/bin/tee"
 
 // Amount to read/write at a time, set to 1 to disable i/o buffering
 #define BUFF_SIZE 4096

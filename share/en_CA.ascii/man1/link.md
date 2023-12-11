@@ -5,17 +5,17 @@ This manual is part of the Mimik System Distribution, other implementations may 
 
 # Name
 
-unlink - Unlink files
+link - Link file
 
 
 # Synopsis
 
-`unlink [file...]`
+`link source dest`
 
 
 # Description
 
-The `unlink` utility shall unlink *file*(s), by invoking the `unlink` function.
+The `link` utility shall link *source* to *dest*, by invoking the `link` function.
 
 
 # Options
@@ -25,9 +25,13 @@ This utility shall not have any options.
 
 # Operands
 
-## file
+## source
 
-*file* shall be passed, one by one, to the C99 unlink function.
+*source* shall be passed, as the first operand, to the C99 link function.
+
+## dest
+
+*dest* shall be passed, as the second operand, to the C99 link function.
 
 
 # Environment Variables
@@ -98,8 +102,8 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[link](link.1) - The opposite of unlink
+[unlink](unlink.1) - The opposite of link
 
-[rm](rm.1) - A similar, better, utility
+[ln](ln.1) - A similar, better, utility
 
-[unlink](unlink.3) - The unlink function manual
+[link](link.3) - The link function manual
