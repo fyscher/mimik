@@ -140,7 +140,6 @@ uncompress
 unexpand
 unget
 uniq
-unlink
 uucp
 uudecode
 uuencode
@@ -160,6 +159,8 @@ zcat
 install
 dispatch-conf
 git
+
+sync
 
 tup dialect
 compiler suite

@@ -1,3 +1,0 @@
-include_rules
-
-: tee.c | conf.h |> !ccld |> $(DIST)/bin/tee
