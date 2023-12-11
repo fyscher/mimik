@@ -33,7 +33,6 @@ df
 diff
 dirname
 du
-echo
 ed
 env
 ex
@@ -62,7 +61,6 @@ jobs
 join
 kill
 lex
-link
 ln
 locale
 localedef
