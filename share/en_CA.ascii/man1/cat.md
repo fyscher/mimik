@@ -65,31 +65,33 @@ Input files shall be in no particular format.
 
 # Output Files
 
-None.
+No output files shall be produced.
 
 
 # Exit Status
 
 ## 0
 
-Success.
+An exit status of zero shall be success.
 
 ## >0
 
-Failure.
+An exit status above zero shall be failure.
 
 
 # Extended Description
 
-None.
+There is no extended description.
 
 
 # Future Directions
 
-None.
+There are no future directions.
 
 
 # Compliance
+
+This utility shall comply with:
 
 The Open Group Base Specifications Issue 7, 2018 edition
 IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008)

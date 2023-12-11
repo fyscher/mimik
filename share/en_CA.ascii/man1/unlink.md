@@ -20,14 +20,14 @@ The `unlink` utility shall unlink *file*(s), by invoking the `unlink` function.
 
 # Options
 
-None.
+This utility shall not have any options.
 
 
 # Operands
 
 ## file
 
-*file* shall be passed, one b  one, to the unlink function.
+*file* shall be passed, one b  one, to the C99 unlink function.
 
 
 # Environment Variables
@@ -88,6 +88,8 @@ There are no future directions.
 
 
 # Compliance
+
+This utility shall comply with:
 
 The Open Group Base Specifications Issue 7, 2018 edition
 IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008)

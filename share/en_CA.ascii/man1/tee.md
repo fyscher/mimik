@@ -68,7 +68,7 @@ Standard error shall be used for diagnostic messages.
 
 # Input Files
 
-None.
+No input files shall be used.
 
 
 # Output Files
@@ -80,24 +80,26 @@ All output *file*(s), and standard output, shall be a copy of standard input.
 
 ## 0
 
-Success.
+An exit status of zero shall be success.
 
 ## >0
 
-Failure.
+An exit status above zero shall be failure.
 
 
 # Extended Description
 
-None.
+There is no extended description.
 
 
 # Future Directions
 
-None.
+There are no future directions.
 
 
 # Compliance
+
+This utility shall comply with:
 
 The Open Group Base Specifications Issue 7, 2018 edition
 IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008)
