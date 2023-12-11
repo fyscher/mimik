@@ -169,8 +169,15 @@ boot loader stuff
 kernel stuff
 
 su + sudo / doas
+login
+
+PAM
 
 databases + data structures
+
+whereis
+
+user / group management
 
 better archiving
 better compressing

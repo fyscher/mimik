@@ -1,4 +1,3 @@
-// [TODO] rework option parsing
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
@@ -29,45 +28,38 @@ main (const int argc, const char **argv)
     nl_catd catd = catopen("cat", 0);
     if (catd < 0)
     {
-        fprintf(stderr, CAT_ERROR, self, errno);
+        fprintf(stderr, CAT_ERROR, self, errno, strerror(errno));
     }
 
+    int j;
     unsigned char flags = FLAG_PARSING | FLAG_NO_FILES;
     for (int i = 1; i<argc; i++)
     {
-        // simple option parsing
-        if (flags & FLAG_PARSING)
+        if (
+            (flags & FLAG_PARSING) &&
+            (argv[i][0] == '-') &&
+            argv[i][1]
+        )
         {
-            // -u : non-buffering i/o, read byte by byte
-            if (!strcmp(argv[i], "-u"))
+            for (j = 1; argv[i][j]; j++)
             {
-                buffSize = 1; // set i/o buffer size to 1
-                setbuf(stdin,  (char*)NULL); // disable buffering
-                setbuf(stdout, (char*)NULL);
-                continue;
-            }
-            // -- : parsing must stop
-            else if (!strcmp(argv[i], "--"))
-            {
-                flags &= ~FLAG_PARSING;
-                continue; // skip file parsing
-            }
-            // all other options, excluding `-' : invalid
-            else if (argv[i][0] == '-' && argv[i][1])
-            {
-                flags |= FLAG_ERROR;
-
-                if (catd < 0)
+                switch (argv[i][j])
                 {
-                    fprintf(stderr, UNKNOWN_OPTION, self, argv[i]);
+                    case 'u': // -u : non-buffering i/o, read byte by byte
+                        buffSize = 1; // set i/o buffer size to 1
+                        setbuf(stdin,  (char*)NULL); // disable buffering
+                        setbuf(stdout, (char*)NULL);
+                        break;
+                    case '-': // -- : parsing stop
+                        flags &= ~FLAG_PARSING;
+                        break;
+                    default:
+                        flags |= FLAG_ERROR;
+                        fprintf(stderr, catgets(catd, 1, 1, UNKNOWN_OPTION), self, argv[i][j]);
+                        break;
                 }
-                else
-                {
-                    fprintf(stderr, catgets(catd, 1, 1, UNKNOWN_OPTION), self, argv[i]);
-                }
-
-                continue;
             }
+            continue;
         }
 
         // files have been given
@@ -83,14 +75,7 @@ main (const int argc, const char **argv)
             {
                 flags |= FLAG_ERROR;
 
-                if (catd < 0)
-                {
-                    fprintf(stderr, CANNOT_OPEN, self, errno, argv[i]);
-                }
-                else
-                {
-                    fprintf(stderr, catgets(catd, 1, 2, CANNOT_OPEN), self, errno, argv[i]);
-                }
+                fprintf(stderr, catgets(catd, 1, 2, CANNOT_OPEN), self, argv[i], errno, strerror(errno));
                 continue;
             }
         }

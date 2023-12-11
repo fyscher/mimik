@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <nl_types.h>
 #include <errno.h>
+#include <string.h>
 #include <signal.h>
 #include "conf.h"
 
@@ -76,7 +77,7 @@ main (const int argc, const char **argv)
         // check if it opened
         if (!file[files])
         {
-            fprintf(stderr, catgets(catd, 1, 2, CANNOT_OPEN), self, errno, argv[i]);
+            fprintf(stderr, catgets(catd, 1, 2, CANNOT_OPEN), self, argv[i], errno, strerror(errno));
             flags |= FLAG_ERROR;
             continue;
         }

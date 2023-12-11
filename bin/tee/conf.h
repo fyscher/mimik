@@ -19,6 +19,6 @@
 #define UNKNOWN_OPTION "%s: Unknown option `-%c'\n"
 
 // Cannot open file 1:2
-#define CANNOT_OPEN "%s %d: Cannot open file `%s' for writing\n"
+#define CANNOT_OPEN "%s: Cannot open file `%s' for writing, errno %d: %s\n"
 
 #endif

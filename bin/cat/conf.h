@@ -9,8 +9,8 @@
 
 // Default messages
 
-#define UNKNOWN_OPTION "%s: Unknown option `%s'\n" // 1:1
-#define CANNOT_OPEN    "%s %d: Cannot open file `%s' for reading\n" // 1:2
-#define CAT_ERROR      "%s %d: Cannot open current locale message catalogue\n"
+#define UNKNOWN_OPTION "%s: Unknown option `-%c'\n" // 1:1
+#define CANNOT_OPEN    "%s: Cannot open file `%s' for reading, errno %d: %s\n" // 1:2
+#define CAT_ERROR      "%s: Cannot open current locale message catalogue, errno %d: %s\n"
 
 #endif 
