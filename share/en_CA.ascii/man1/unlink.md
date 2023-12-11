@@ -5,39 +5,29 @@ This manual is part of the Mimik System Distribution, other implementations may 
 
 # Name
 
-tee - Create a copy of standard input
+unlink - Unlink files
 
 
 # Synopsis
 
-`tee [-aiu] [file...]`
+`unlink [file...]`
 
 
 # Description
 
-The `tee` utility shall copy the standard input to *file*(s), and mirror the standard input to standard output. The *file*(s) shall be over written to, unless **-a** is specified then all *file*(s) after shall be appended to.
+The `unlink` utility shall unlink *file*(s), by invoking the `unlink` function.
 
 
 # Options
 
-## -a
-
-If **-a** is given append to all *file*s after instead of over writing.
-
-## -i
-
-If **-i** is given ignore interrupt signal, **SIGINT**.
-
-## -u
-
-If **-u** is given read and write one byte at a time.
+None.
 
 
 # Operands
 
 ## file
 
-The contents of standard input shall be written to all *file* operands.
+*file* shall be passed, one b  one, to the unlink function.
 
 
 # Environment Variables
@@ -53,12 +43,12 @@ The contents of standard input shall be written to all *file* operands.
 
 # StdIn
 
-Standard input shall be read and written to all *file* operands and to standard output.
+Standard input shall not be used.
 
 
 # StdOut
 
-The contents of standard input shall be written to standard output.
+Standard output shall not be used.
 
 
 # StdErr
@@ -68,33 +58,33 @@ Standard error shall be used for diagnostic messages.
 
 # Input Files
 
-None.
+Input files are not modified nor read in any way.
 
 
 # Output Files
 
-All output *file*(s), and standard output, shall be a copy of standard input.
+No output files shall be generated.
 
 
 # Exit Status
 
 ## 0
 
-Success.
+An exit status of zero shall be success.
 
 ## >0
 
-Failure.
+An exit status above zero shall be failure.
 
 
 # Extended Description
 
-None.
+There is no extended description.
 
 
 # Future Directions
 
-None.
+There are no future directions.
 
 
 # Compliance
@@ -106,4 +96,8 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[cat](cat.1) - Concatenate files to standard output
+[link](link.1) - The opposite of unlink
+
+[rm](rm.1) - A similar utility
+
+[unlink](unlink.3) - The unlink function manual

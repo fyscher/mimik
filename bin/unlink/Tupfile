@@ -1,0 +1,3 @@
+include_rules
+
+: unlink.c | conf.h |> !ccld |> $(DIST)/bin/unlink
