@@ -1,7 +1,6 @@
 # Prologue
 
-This manuel is part of the Mimik System Distribution, other implementation may differ.
-Some compatibility with existing standards may be met but to do not expect any.
+This manual is part of the Mimik System Distribution, other implementations may differ. Some compatibility with existing standards may be met but to do not expect any.
 
 
 # Name
@@ -16,60 +15,52 @@ cat - concatenate files
 
 # Description
 
-concatenate *file*(s), in sequence, to standard output. If `-` is given as a *file*, or no *file* is given, then read from standard input.
+The `cat` utility shall concatenate *file*(s), in sequence, to standard output. If `-` is given as a *file*, or no *file* is given, then read from standard input.
 
 
 # Options
 
 ## -u
 
-Disable all buffering.
+If **-u** is given disable all buffering.
 
 
 # Operands
 
 ## file
 
-The file to concatenated in the sequence it appears to standard output. If `-` is given then standard input shall be read, but not closed nor reopened.
+Concatenate *file* in the sequence it appears to standard output. If `-` is given then standard input shall be read, but not closed nor reopened.
 
 
 # Environment Variables
 
 ## Lang
 
-Default value for all LC values.
-
-## LC_ALL
-
-Override all LC values.
-
-## LC_MESSAGES
-
-The locale for diagnostic messages.
+`Lang` shall be the default value for all LC variables. `Lang` shall be used to determine the locale for diagnostic messages.
 
 ## NLSPATH
 
-A list of paths to check for locale data.
+`NLSPATH` shall be a list of paths to check for locale data.
 
 
 # StdIn
 
-Used is no *file* is given, or if `-` is given as a *file*.
+Standard in shall be used is no *file* is given, or if `-` is given as a *file*.
 
 
 # StdOut
 
-The contents of *file* concatenated in sequence.
+Standard output shall be the contents of *file* concatenated in sequence.
 
 
 # StdErr
 
-Used for diagnostic messages.
+Standard error shall be used for diagnostic messages.
 
 
 # Input Files
 
-No particular format.
+Input files shall be in no particular format.
 
 
 # Output Files
@@ -96,6 +87,13 @@ None.
 # Future Directions
 
 None.
+
+
+# Compliance
+
+The Open Group Base Specifications Issue 7, 2018 edition
+IEEE Std 1003.1-2017 (Revision of IEEE Std 1003.1-2008)
+Copyright © 2001-2018 IEEE and The Open Group
 
 
 # See Also

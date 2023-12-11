@@ -1,3 +1,4 @@
+// [TODO] rework option parsing
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
@@ -7,9 +8,6 @@
 #define FLAG_PARSING  0b001
 #define FLAG_ERROR    0b010
 #define FLAG_NO_FILES 0b100
-
-#include <stdlib.h>
-#include <locale.h>
 
 int
 main (const int argc, const char **argv)
