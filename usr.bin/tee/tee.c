@@ -29,7 +29,7 @@ main (const int argc, const char **argv)
     catd = catopen("tee", 0);
     if (catd < 0)
     {
-        fprintf(stderr, CAT_ERROR, self, errno);
+        fprintf(stderr, CAT_ERROR, self, errno, strerror(errno));
     }
 
     size_t buffSize = BUFF_SIZE;

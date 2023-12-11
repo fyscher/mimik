@@ -17,7 +17,7 @@ main (const int argc, const char **argv)
     nl_catd catd = catopen("unlink", 0);
     if (catd < 0)
     {
-        fprintf(stderr, CATD_FAILED, self);
+        fprintf(stderr, CATD_FAILED, self, errno, strerror(errno));
     }
 
     unsigned int err = 0;

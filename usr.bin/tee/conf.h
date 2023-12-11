@@ -13,7 +13,7 @@
 // Default messages
 
 // Catopen failed
-#define CAT_ERROR "%s %d: Cannot open current locale message catalogue\n"
+#define CAT_ERROR "%s: Cannot open current locale message catalogue, errno %d: %s\n"
 
 // Unknown option 1:1
 #define UNKNOWN_OPTION "%s: Unknown option `-%c'\n"
