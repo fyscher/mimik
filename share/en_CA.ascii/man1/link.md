@@ -67,7 +67,7 @@ Input files are not modified nor read in any way.
 
 # Output Files
 
-No output files shall be generated.
+*dest* shall be created as a hard-link of *source*.
 
 
 # Exit Status

@@ -58,7 +58,7 @@ Standard error shall be used for diagnostic messages.
 
 # Input Files
 
-Input files are not modified nor read in any way.
+The hard-links, *file*(s), shall removed.
 
 
 # Output Files
