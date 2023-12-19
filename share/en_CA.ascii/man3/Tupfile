@@ -1,0 +1,5 @@
+include_rules
+DIR=/usr/share/locale/en_CA.ascii/man/man3/
+
+: foreach *.md |> !fold |> %b.fd
+: foreach *.fd |> !comp |> $(DIST)$(DIR)%B.z

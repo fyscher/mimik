@@ -1,0 +1,6 @@
+include_rules
+
+: foreach ./string/*.c |> !cc |> ./string_%B.o {obj}
+
+: {obj} |> !ldso |> $(DIST)/lib/libc.so
+: {obj} |> !ar   |> $(DIST)/lib/libc.a

@@ -1,17 +1,14 @@
-# Optimization
-# OPT:=-O2
-OPT:=-Os -s
-
-
 # C99
-CFLAGS+=-Wall -Wextra -std=c99 $(OPT)
+CFLAGS+=-Wall -Wextra -std=c99 -O2
+CC:=cc
 
-# GCC
-# CC:=gcc
+# Archive
+AR:=ar
+ARFLAGS+=
 
-# Clang / LLVM
-CC:=clang
-CFLAGS+=-fuse-ld=lld
+# Linker
+LD:=ld
+LDFLAGS+=-O2 --gc-sections
 
 
 # Dirs
@@ -19,10 +16,13 @@ DIST:=$(TUP_CWD)/dist/
 
 
 # Rules
-!ccld   = |> $(CC) $(CFLAGS) -o %o %f |>
-!fold   = |> fold -s -w 80 %f > %o    |>
-!comp   = |> compress -kc  %f > %o    |>
-!gencat = |> gencat %o %f             |>
-!exmv   = |> install -Dm755 %f %o     |>
+!ccld   = |> $(CC) $(CFLAGS) -o %o %f           |>
+!fold   = |> fold -s -w 80 %f > %o              |>
+!comp   = |> compress -kc  %f > %o              |>
+!gencat = |> gencat %o %f                       |>
+!exmv   = |> install -Dm755 %f %o               |>
+!ldso   = |> $(LD) $(LDFLAGS) --shared %f -o %o |>
+!ar     = |> $(AR) rcs $(ARFLAGS) %o %f         |>
+!cc     = |> $(CC) $(CFLAGS) -c -o %o %f        |>
 
 .gitignore
