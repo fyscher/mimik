@@ -1,6 +1,6 @@
 # Prologue
 
-This manual is part of the Mimik System Distribution, other implementations may differ. Some compatibility with existing standards may be met but to do not expect any.
+This manual is part of the Mimik System Tree, other implementations may differ. Some compatibility with existing standards may be met but to do not expect any.
 
 
 # Name
