@@ -15,7 +15,7 @@ main (const int argc, const char **argv)
     }
 
     nl_catd catd = catopen("unlink", 0);
-    if (catd < 0)
+    if (catd == (nl_catd)-1)
     {
         fprintf(stderr, CATD_FAILED, self, errno, strerror(errno));
     }
@@ -30,7 +30,7 @@ main (const int argc, const char **argv)
         }
     }
 
-    if (catd >= 0)
+    if (catd != (nl_catd)-1)
     {
         catclose(catd);
     }

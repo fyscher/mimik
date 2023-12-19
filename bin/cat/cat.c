@@ -26,7 +26,7 @@ main (const int argc, const char **argv)
 
     // Don't use LC_MESSAGES because it's implementation is very weird on most platforms
     nl_catd catd = catopen("cat", 0);
-    if (catd < 0)
+    if (catd == (nl_catd)-1)
     {
         fprintf(stderr, CAT_ERROR, self, errno, strerror(errno));
     }
@@ -115,7 +115,7 @@ main (const int argc, const char **argv)
         } while (read >= buffSize); // read should never be greater, but it's better to catch all possibilities
     }
 
-    if (catd >= 0)
+    if (catd != (nl_catd)-1)
     {
         catclose(catd);
     }

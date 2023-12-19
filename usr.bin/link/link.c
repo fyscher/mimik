@@ -17,7 +17,7 @@ main (const int argc, const char **argv)
     }
 
     nl_catd catd = catopen("link", 0);
-    if (catd < 0)
+    if (catd == (nl_catd)-1)
     {
         fprintf(stderr, CATD_ERROR, self, errno, strerror(errno));
     }
@@ -33,7 +33,7 @@ main (const int argc, const char **argv)
         err = 1;
     }
 
-    if (catd >= 0)
+    if (catd != (nl_catd)-1)
     {
         catclose(catd);
     }

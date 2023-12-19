@@ -27,7 +27,7 @@ main (const int argc, const char **argv)
     unsigned char flags = FLAG_PARSING;
 
     catd = catopen("tee", 0);
-    if (catd < 0)
+    if (catd == (nl_catd)-1)
     {
         fprintf(stderr, CAT_ERROR, self, errno, strerror(errno));
     }
@@ -113,7 +113,7 @@ main (const int argc, const char **argv)
         fclose(file[files-1]);
     }
     
-    if (catd >= 0)
+    if (catd != (nl_catd)-1)
     {
         catclose(catd);
     }
