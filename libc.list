@@ -1006,7 +1006,6 @@ strftime_l
 strlen
 strncasecmp
 strncasecmp_l
-strncat
 strncmp
 strncpy
 strndup
