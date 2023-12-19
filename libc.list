@@ -991,7 +991,6 @@ strcasecmp
 strcasecmp_l
 strcat
 strchr
-strcmp
 strcoll
 strcoll_l
 strcpy
