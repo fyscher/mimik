@@ -1,6 +1,6 @@
 admin
 alias
-ar
+ar(.ar,.tar,.pax,.cpio)
 asa
 at
 awk
@@ -15,11 +15,11 @@ cflow
 chgrp
 chmod
 chown
-cksum
+cksum(.md5,.sha1,.sha512)
 cmp
 comm
 command
-compress
+compress(.lzw,.lzma,.xz,.gzip,.bzip2,.lzd)
 cp
 crontab
 csplit
@@ -71,7 +71,7 @@ ls
 m4
 mailx
 make
-man
+man(.md,.roff,.html,.tex)
 mesg
 mkdir
 mkfifo
@@ -86,7 +86,7 @@ od
 paste
 patch
 pathchk
-pax
+pax -> ar.pax
 pr
 printf
 prs
@@ -134,7 +134,7 @@ ulimit
 umask
 unalias
 uname
-uncompress
+uncompress(.lzw,.lzma,.xz,.gzip,.bzip2,.lzd)
 unexpand
 unget
 uniq
@@ -157,6 +157,10 @@ zcat
 install
 dispatch-conf
 git
+const ( system consistency check / testing )
+
+fsck
+mkfs
 
 sync
 
@@ -168,9 +172,6 @@ tup dialect
 compiler suite
 package manager
 
-boot loader stuff
-kernel stuff
-
 su + sudo / doas
 login
 
@@ -181,9 +182,6 @@ databases + data structures
 whereis
 
 user / group management
-
-better archiving
-better compressing
 
 web stuff:
     javascript
