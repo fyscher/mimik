@@ -993,7 +993,6 @@ strcat
 strchr
 strcoll
 strcoll_l
-strcpy
 strcspn
 strdup
 strerror

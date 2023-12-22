@@ -10,4 +10,8 @@ strcmp (const char *restrict s1, const char *restrict s2);
 int
 strncmp (const char *restrict s1, const char *restrict s2, size_t n);
 
+// string/strcpy.c
+char *
+strcpy (char *restrict dst, const char *restrict src);
+
 #endif

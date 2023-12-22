@@ -154,6 +154,12 @@ xargs
 yacc
 zcat
 
+unlink ( test )
+link ( test )
+tee ( test )
+cat ( test )
+echo ( test )
+
 install
 dispatch-conf
 git

@@ -36,7 +36,7 @@ main (void)
 
     if (!err)
     {
-        printf("libc/strncmp: Not inconsistent\n");
+        printf("libc/strncmp: Consistent\n");
     }
     else
     {

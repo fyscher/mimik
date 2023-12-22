@@ -25,7 +25,7 @@ main (void)
 
     if (!err)
     {
-        printf("libc/strcmp: Not inconsistent\n");
+        printf("libc/strcmp: Consistent\n");
     }
     else
     {
