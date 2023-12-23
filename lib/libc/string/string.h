@@ -18,4 +18,8 @@ strcpy (char *restrict dst, const char *restrict src);
 char *
 strncpy (char *restrict dst, const char *restrict src, size_t n);
 
+// string/strlen.c
+size_t
+strlen (const char *s);
+
 #endif
