@@ -2,6 +2,11 @@
 #define __LIBC_STRING_H__
 #include <stddef.h>
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 // string/strcmp.c
 int 
 strcmp (const char *restrict s1, const char *restrict s2);
@@ -30,5 +35,9 @@ strlen (const char *s);
 
 size_t
 strnlen (const char *s, size_t n);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
