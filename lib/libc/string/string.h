@@ -28,4 +28,7 @@ stpncpy (char *restrict dst, const char *restrict src, size_t n);
 size_t
 strlen (const char *s);
 
+size_t
+strnlen (const char *s, size_t n);
+
 #endif

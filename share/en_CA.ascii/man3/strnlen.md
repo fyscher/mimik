@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strlen - Get length of string, part of libc
+strnlen - Get length of fixed length string, part of libc
 
 
 # Synopsis
@@ -13,13 +13,13 @@ strlen - Get length of string, part of libc
 ```C
 #include <string.h>
 
-size_t strlen (const char *s);
+size_t strnlen (const char *s, size_t n);
 ```
 
 
 # Description
 
-`strlen` shall compute the length of *s*, not including the terminating character. An *s* value of NULL shall never be given.
+`strnlen` shall compute the length of *s*, not including the terminating character. `strnlen` shall not read more than *n* characters from *s*. An *s* value of NULL shall never be given.
 
 
 # Environment Variables
@@ -53,4 +53,4 @@ Copyright (c) 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strnlen](strnlen.3) - The sister function to `strlen`, allows for fixed size *s*
+[strlen](strlen.3) - The sister function to `strnlen`, allows for non-fixed size *s*

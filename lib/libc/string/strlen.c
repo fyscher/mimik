@@ -13,3 +13,19 @@ strlen (const char *s)
 
     return sz;
 }
+
+size_t
+strnlen (const char *s, size_t n)
+{
+    size_t sz = 0;
+
+    while (*s && n)
+    {
+        s++;
+        sz++;
+        n--;
+    }
+
+    return sz;
+}
+
