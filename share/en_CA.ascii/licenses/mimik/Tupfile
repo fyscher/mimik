@@ -1,4 +1,4 @@
 include_rules
-DIR=/usr/share/locale/en_CA.ascii/man/man3/
+DIR=/usr/share/locale/en_CA.ascii/licenses/mimik/
 
 : foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b.z

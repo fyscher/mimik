@@ -16,13 +16,14 @@ DIST:=$(TUP_CWD)/dist/
 
 
 # Rules
-!ccld   = |> $(CC) $(CFLAGS) -o %o %f           |>
-!fold   = |> fold -s -w 80 %f > %o              |>
-!comp   = |> compress -kc  %f > %o              |>
-!gencat = |> gencat %o %f                       |>
-!exmv   = |> install -Dm755 %f %o               |>
-!ldso   = |> $(LD) $(LDFLAGS) --shared %f -o %o |>
-!ar     = |> $(AR) rcs $(ARFLAGS) %o %f         |>
-!cc     = |> $(CC) $(CFLAGS) -c -o %o %f        |>
+!ccld   = |> $(CC) $(CFLAGS) -o %o %f             |>
+# !fold   = |> fold -s -w 80 %f > %o                |>
+# !comp   = |> compress -kc  %f > %o                |>
+!gencat = |> gencat %o %f                         |>
+!exmv   = |> install -Dm755 %f %o                 |>
+!ldso   = |> $(LD) $(LDFLAGS) --shared %f -o %o   |>
+!ar     = |> $(AR) rcs $(ARFLAGS) %o %f           |>
+!cc     = |> $(CC) $(CFLAGS) -c -o %o %f          |>
+!txtdst = |> fold -s -w 80 %f | compress -kc > %o |>
 
 .gitignore

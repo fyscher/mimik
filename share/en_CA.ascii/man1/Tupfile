@@ -1,5 +1,4 @@
 include_rules
 DIR=/usr/share/locale/en_CA.ascii/man/man1/
 
-: foreach *.md |> !fold |> %b.fd
-: foreach *.fd |> !comp |> $(DIST)$(DIR)%B.z
+: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b.z
