@@ -4,7 +4,13 @@
 char *
 strcpy (char *restrict dst, const char *restrict src)
 {
-    char *dstcpy = dst;
+    stpcpy(dst, src);
+    return dst;
+}
+
+char *
+stpcpy (char *restrict dst, const char *restrict src)
+{
     while (*src)
     {
         *dst = *src;
@@ -13,5 +19,5 @@ strcpy (char *restrict dst, const char *restrict src)
         dst++;
     }
     *dst = (char)0;
-    return dstcpy;
+    return dst;
 }
