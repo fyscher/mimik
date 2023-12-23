@@ -16,5 +16,7 @@ strncmp (const char *restrict s1, const char *restrict s2, size_t n)
         n--;
     }
 
-    return *s1 - *s2;
+    if (n)
+        return *s1 - *s2;
+    return 0;
 }
