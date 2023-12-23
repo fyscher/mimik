@@ -1005,8 +1005,6 @@ strftime_l
 strlen
 strncasecmp
 strncasecmp_l
-strncmp
-strncpy
 strndup
 strnlen
 strpbrk
