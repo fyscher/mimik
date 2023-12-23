@@ -20,8 +20,7 @@ int strcmp (const char *restrict s1, const char *restrict s2);
 # Description
 
 The string values of *s1* and *s2* shall be compared, if they are equal then zero shall be return. 
-If the strings are not equal then the return value shall be non-zero and have the signage of the subtraction of the first byte of *s1* by *s2*; `s1[0] - s2[0]`.
-The signage shall be positive if the first byte of *s1* is large than the first byte of *s2*, and vise versa for the negative.
+If the strings are not equal then the return value shall be positive if *s1* is lexicographically larger than *s2*, and vise versa for negative.
 
 
 # Environment Variables
@@ -55,4 +54,4 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strncmp](strncmp.3) - The sister function to `strcmp`, allows you to set the maximum length for the strings
+[strncmp](strncmp.3) - The sister function to `strcmp`, allows for fixed length strings

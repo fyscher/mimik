@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strcpy - Copy source string to destination
+strcpy - Copy source string to destination, part of libc
 
 # Synopsis
 
@@ -54,4 +54,4 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strncpy](strncpy.3) - The sister function to `strcpy`, allows you to set the maximum length for the string
+[strncpy](strncpy.3) - The sister function to `strcpy`, allows for fixed length *dst*

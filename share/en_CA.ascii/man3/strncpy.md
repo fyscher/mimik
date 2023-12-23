@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strncpy - Copy source string to destination of fixed size
+strncpy - Copy source string to fixed size destination buffer, part of libc
 
 # Synopsis
 
@@ -20,7 +20,7 @@ char *strncpy (char *restrict dst, const char *restrict src, size_t n);
 
 `strncpy` shall copy the string contents of string *src* to buffer *dst*. The function shall stop on NULL character, or on character index *n*.
 `strncpy` shall return a pointer to the start of *dst*.
-The user shall be responsible for the allocation of the buffer *dst*, its size being that of *n*.
+The user shall be responsible for the allocation of the buffer *dst*, its size being that of *n*. The *dst* buffer may not be NULL terminated.
 
 
 # Environment Variables
@@ -54,4 +54,4 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strcpy](strcpy.3) - The sister function to `strncpy`, a more generic version
+[strcpy](strcpy.3) - The sister function to `strncpy`, for non-fixed length *dst* buffer

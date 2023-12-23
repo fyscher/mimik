@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strcmp - Compare part of the value of two strings, part of libc
+strncmp - Compare two fixed length strings, part of libc
 
 
 # Synopsis
@@ -20,8 +20,7 @@ int strncmp (const char *restrict s1, const char *restrict s2, size_t n);
 # Description
 
 The string values of *s1* and *s2* shall be compared, if they are equal then zero shall be return. 
-If the strings are not equal then the return value shall be non-zero and have the signage of the subtraction of the first byte of *s1* by *s2*; `s1[0] - s2[0]`.
-The signage shall be positive if the first byte of *s1* is large than the first byte of *s2*, and vise versa for the negative.
+If the strings are not equal then the return value shall be positive if *s1* is lexicographically larger than *s2*, and vise versa for negative.
 `strncat` shall not compare more than *n* bytes from *s1* nor *s2*.
 
 
@@ -56,4 +55,4 @@ Copyright © 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strcmp](strcmp.3) - The sister function to `strncmp`, more general
+[strcmp](strcmp.3) - The sister function to `strncmp`, for non-fixed length strings

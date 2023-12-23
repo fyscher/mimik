@@ -4,8 +4,6 @@
 int
 strncmp (const char *restrict s1, const char *restrict s2, size_t n)
 {
-    const int sub = (int)*s1 - (int)*s2;
-
     while (*s1 == *s2 && n)
     {
         if (!*s1)
@@ -17,5 +15,6 @@ strncmp (const char *restrict s1, const char *restrict s2, size_t n)
         s2++;
         n--;
     }
-    return sub;
+
+    return *s1 - *s2;
 }
