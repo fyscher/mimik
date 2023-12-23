@@ -1,4 +1,4 @@
-#include <string.h>
+#include "../string.h"
 #include <stdio.h>
 
 int
@@ -9,46 +9,46 @@ main (void)
     char *x = strcpy(buff, "TEST!");
     if (strcmp(buff, "TEST!"))
     {
-        printf("libc/strcpy: Does not copy to empty dst\n");
+        puts("libc/strcpy: Does not copy to empty dst");
         err = 1;
     }
     if (x != buff)
     {
-        printf("libc/strcpy: Does not return end of string on empty dst\n");
+        puts("libc/strcpy: Does not return dst on empty dst");
         err = 1;
     }
 
     x = strcpy(buff, "TEST2!");
     if (strcmp(buff, "TEST2!"))
     {
-        printf("libc/strcpy: Does not copy to dst\n");
+        puts("libc/strcpy: Does not copy to dst");
         err = 1;
     }
     if (x != buff)
     {
-        printf("libc/strcpy: Does not return end of string\n");
+        puts("libc/strcpy: Does not return dst\n");
         err = 1;
     }
 
     x = strcpy(buff, "");
     if (strcmp(buff, ""))
     {
-        printf("libc/strcpy: Does not clear src on empty dst\n");
+        puts("libc/strcpy: Does not clear src on empty dst");
         err = 1;
     }
     if (x != buff)
     {
-        printf("libc/strcpy: Does not return end of string on empty src\n");
+        puts("libc/strcpy: Does not return dst on empty src");
         err = 1;
     }
 
     if (!err)
     {
-        printf("libc/strcpy: Consistent\n");
+        puts("libc/strcpy: Consistent");
     }
     else
     {
-        printf("libc/strcpy: Inconsistent!\n");
+        puts("libc/strcpy: Inconsistent!");
     }
     return err;
 }

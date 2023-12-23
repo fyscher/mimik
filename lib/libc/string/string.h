@@ -14,4 +14,8 @@ strncmp (const char *restrict s1, const char *restrict s2, size_t n);
 char *
 strcpy (char *restrict dst, const char *restrict src);
 
+// string/strncpy.c
+char *
+strncpy (char *restrict dst, const char *restrict src, size_t n);
+
 #endif
