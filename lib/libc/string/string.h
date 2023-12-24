@@ -36,6 +36,10 @@ strlen (const char *s);
 size_t
 strnlen (const char *s, size_t n);
 
+// string/strcat.c
+char *
+strcat (char *restrict s1, const char *restrict s2);
+
 #ifdef __cplusplus
 }
 #endif
