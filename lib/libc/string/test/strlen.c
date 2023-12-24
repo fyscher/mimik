@@ -8,22 +8,22 @@ main (void)
     
     if (strlen("TEST") != 4)
     {
-        puts("libc/strlen: Does not compute the length of a string");
+        puts("libc/strlen 11: Does not compute the length of a string");
         err = 1;
     }
     if (strlen(""))
     {
-        puts("libc/strlen: Does not compute the length of an empty string");
+        puts("libc/strlen 16: Does not compute the length of an empty string");
         err = 1;
     }
 
     if (!err)
     {
-        puts("libc/strlen: Consistent");
+        puts("libc/strlen:\tConsistent");
     }
     else
     {
-        puts("libc/strlen: Inconsistent!");
+        puts("libc/strlen:\tInconsistent!");
     }
     return err;
 }
