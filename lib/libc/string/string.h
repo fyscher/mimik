@@ -43,6 +43,10 @@ strcat (char *restrict s1, const char *restrict s2);
 char *
 strncat (char *restrict s1, const char *restrict s2, size_t n);
 
+// string/strchr.c
+char *
+strchr (const char *s, int c);
+
 #ifdef __cplusplus
 }
 #endif
