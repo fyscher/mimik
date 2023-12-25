@@ -40,6 +40,9 @@ strnlen (const char *s, size_t n);
 char *
 strcat (char *restrict s1, const char *restrict s2);
 
+char *
+strncat (char *restrict s1, const char *restrict s2, size_t n);
+
 #ifdef __cplusplus
 }
 #endif
