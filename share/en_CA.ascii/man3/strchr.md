@@ -53,4 +53,6 @@ Copyright (c) 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strrchr](strrchr.3) - The sister function to `strchr`, returns the last occurrence of *c*
+[strrchr](strrchr.3) - A sister function to `strchr`, returns the last occurrence of *c*
+
+[strpbrk](strpbrk.3) - A sister function to `strchr`, finds match from a list of *c*s

@@ -50,6 +50,10 @@ strchr (const char *s, int c);
 char *
 strrchr (const char *s, int c);
 
+// string/strpbrk.c
+char *
+strpbrk (const char *s1, const char *s2);
+
 #ifdef __cplusplus
 }
 #endif

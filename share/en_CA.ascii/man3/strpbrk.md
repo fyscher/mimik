@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strrchr - Locate character in string, part of libc
+strpbrk - Locate character, from list, in string, part of libc
 
 
 # Synopsis
@@ -13,13 +13,13 @@ strrchr - Locate character in string, part of libc
 ```C
 #include <string.h>
 
-char *strrchr (const char *s, int c);
+char *strpbrk (const char *s1, const char *s2);
 ```
 
 
 # Description
 
-`strrchr` shall return a pointer to the last occurrence of *c*, interpreted as a **char**, in string *s*. If there is no occurrence of *c* in *s* then a NULL pointer shall be returned.
+`strpbrk` shall return a pointer to the first occurrence of any character in string *s2* in string *s1*. If there is no occurrence of any character in *s2* in *s1* then a NULL pointer shall be returned. `strpbrk` shall favor the leading characters in *s2*.
 
 
 # Environment Variables
@@ -53,6 +53,6 @@ Copyright (c) 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[strchr](strchr.3) - A sister function to `strrchr`, returns the first occurrence of *c*
+[strchr](strchr.3) - A sister function to `strpbrk`, returns the first occurrence of single *s2*
 
-[strpbrk](strpbrk.3) - A sister function to `strrchr`, finds match from a list of *c*s
+[strrchr.3](strrchr.3) - A sister function to `strpbrk`, returns the last occurrence of single *s2*
