@@ -13,3 +13,18 @@ strchr (const char *s, int c)
 
     return (char*)NULL;
 }
+
+char *
+strrchr (const char *s, int c)
+{
+    char *found = (char*)NULL;
+    do
+    {
+        if (*s == (char)c)
+        {
+            found = (char *)s;
+        }
+    } while (*s++);
+
+    return found;
+}

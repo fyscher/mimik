@@ -985,12 +985,8 @@ statvfs
 stde
 std
 stdo
-stpcpy
-stpncpy
 strcasecmp
 strcasecmp_l
-strcat
-strchr
 strcoll
 strcoll_l
 strcspn
@@ -1002,14 +998,11 @@ strfmon
 strfmon_l
 strftime
 strftime_l
-strlen
 strncasecmp
 strncasecmp_l
 strndup
-strnlen
 strpbrk
 strptime
-strrchr
 strsignal
 strspn
 strstr
