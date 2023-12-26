@@ -5,43 +5,44 @@ int
 main (void)
 {
     int err = 0;
-    char *x = strchr("String", 'S');
+    char *buff = "String";
+    char *x = strchr(buff, 'S');
     if (!x)
     {
         puts("libc/strchr 11: Does not find first character match");
         err = 1;
     }
-    else if (*x != 'S')
+    else if (x != buff)
     {
         puts("libc/strchr 16: Mismatches on first character match");
         err = 1;
     }
 
-    x = strchr("String", (char)0);
+    x = strchr(buff, (char)0);
     if (!x)
     {
         puts("libc/strchr 23: Does not find last character match");
         err = 1;
     }
-    else if (*x != (char)0)
+    else if (x != buff+6)
     {
         puts("libc/strchr 28: Mismatches on last character match");
         err = 1;
     }
 
-    x = strchr("String", 'r');
+    x = strchr(buff, 'r');
     if (!x)
     {
         puts("libc/strchr 35: Does not find character");
         err = 1;
     }
-    else if (*x != 'r')
+    else if (x != buff+2)
     {
         puts("libc/strchr 40: Mismatches");
         err = 1;
     }
 
-    x = strchr("String", '=');
+    x = strchr(buff, '=');
     if (x)
     {
         puts("libc/strchr 47: Matches on nothing");
