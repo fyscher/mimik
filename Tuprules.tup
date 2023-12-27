@@ -1,5 +1,5 @@
 # C99
-CFLAGS+=-Wall -Wextra -std=c99 -O2
+CFLAGS+=-Wall -Wextra -std=c99
 CC:=cc
 
 # Archive
@@ -8,8 +8,22 @@ ARFLAGS+=
 
 # Linker
 LD:=ld
-LDFLAGS+=-O2 --gc-sections
+LDFLAGS+=
 
+ifeq (@(USE_LLVM),y)
+CFLAGS+=-fuse-ld=lld
+CC=clang
+
+LD=ld.lld
+endif
+
+ifeq (@(RELEASE),y)
+CFLAGS+=-s -O2
+LDFLAGS+=-s -O2 --gc-sections
+else
+CFLAGS+=-g -O0
+LDFLAGS+=-O0
+endif
 
 # Dirs
 DIST:=$(TUP_CWD)/dist/
@@ -17,13 +31,18 @@ DIST:=$(TUP_CWD)/dist/
 
 # Rules
 !ccld   = |> $(CC) $(CFLAGS) -o %o %f             |>
-# !fold   = |> fold -s -w 80 %f > %o                |>
-# !comp   = |> compress -kc  %f > %o                |>
 !gencat = |> gencat %o %f                         |>
 !exmv   = |> install -Dm755 %f %o                 |>
 !ldso   = |> $(LD) $(LDFLAGS) --shared %f -o %o   |>
 !ar     = |> $(AR) rcs $(ARFLAGS) %o %f           |>
 !cc     = |> $(CC) $(CFLAGS) -c -o %o %f          |>
+
+ifeq (@(COMPRESS_TEXT),y)
 !txtdst = |> fold -s -w 80 %f | compress -kc > %o |>
+COMP_END=.z
+else
+!txtdst = |> fold -s -w 80 %f > %o |>
+COMP_END=
+endif
 
 .gitignore

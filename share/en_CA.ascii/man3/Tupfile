@@ -1,4 +1,6 @@
 include_rules
 DIR=/usr/share/locale/en_CA.ascii/man/man3/
 
-: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b.z
+ifeq (@(BUILD_MANUALS),y)
+: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b$(COMP_END)
+endif

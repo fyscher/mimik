@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 char *
-strpbrk (const char *s1, const char *s2)
+strpbrk (const char *restrict s1, const char *restrict s2)
 {
     while (*s1)
     {

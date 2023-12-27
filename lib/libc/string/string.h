@@ -52,7 +52,7 @@ strrchr (const char *s, int c);
 
 // string/strpbrk.c
 char *
-strpbrk (const char *s1, const char *s2);
+strpbrk (const char *restrict s1, const char *restrict s2);
 
 #ifdef __cplusplus
 }

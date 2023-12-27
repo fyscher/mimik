@@ -1,4 +1,6 @@
 include_rules
 DIR=/usr/share/locale/en_CA.ascii/licenses/mimik/
 
-: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b.z
+ifeq (@(BUILD_LICENSES),y)
+: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b$(COMP_END)
+endif

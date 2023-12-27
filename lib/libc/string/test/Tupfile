@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(BUILD_TESTS),y)
 : foreach *.c |> !ccld -fno-builtin |> $(DIST)/usr/test/libc/%B
+endif
