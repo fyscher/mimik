@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strpbrk - Locate character, from list, in string, part of libc
+strpbrk - Locate character, from a list, in a string, part of libc
 
 
 # Synopsis
