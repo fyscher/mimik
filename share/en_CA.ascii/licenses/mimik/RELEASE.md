@@ -6,6 +6,7 @@
  - Inclusion of a simple `/etc/profile`
  - Setup of Tup build system
  - Permissive licensing
+ - Simple README
 
 
 ## Testing / Staging

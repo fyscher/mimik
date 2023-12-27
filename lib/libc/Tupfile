@@ -3,4 +3,7 @@ include_rules
 : foreach ./string/*.c |> !cc |> ./%B.o {obj}
 
 : {obj} |> !ldso |> $(DIST)/lib/libc.so
-: {obj} |> !ar   |> $(DIST)/lib/libc.a
+
+ifeq (@(BUILD_STATIC),y)
+: {obj} |> !ar |> $(DIST)/usr/lib/libc.a
+endif
