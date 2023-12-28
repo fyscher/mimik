@@ -2,11 +2,20 @@
 #include <string.h>
 #include <errno.h>
 #include <nl_types.h>
-#include "conf.h"
 
 #define FLAG_PARSING  0b001
 #define FLAG_ERROR    0b010
 #define FLAG_NO_FILES 0b100
+
+#define DEFAULT_SELF "/bin/cat"
+#define UNKNOWN_OPTION "%s: Unknown option `-%c'\n" // 1:1
+#define CANNOT_OPEN    "%s: Cannot open file `%s' for reading, errno %d: %s\n" // 1:2
+#define CAT_ERROR      "%s: Cannot open current locale message catalogue, errno %d: %s\n"
+
+#ifndef BUFF_SIZE
+#   warning "/bin/cat: BUFF_SIZE not given, defaulting to 4096"
+#   define BUFF_SIZE 4096
+#endif
 
 int
 main (const int argc, const char **argv)

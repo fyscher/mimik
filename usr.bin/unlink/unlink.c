@@ -3,7 +3,10 @@
 #include <errno.h>
 #include <string.h>
 #include <nl_types.h>
-#include "conf.h"
+
+#define FAILED "%s: Failed to unlink file `%s', errno %d: %s\n"
+#define CATD_FAILED "%s: Failed to open current locale message catalogue, errno %d: %s\n"
+#define DEFAULT_SELF "/usr/bin/unlink"
 
 int
 main (const int argc, const char **argv)

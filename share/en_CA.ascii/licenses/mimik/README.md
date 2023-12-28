@@ -17,7 +17,7 @@ Just run:
 
 `$ tup`
 
-The system should be built into the `./dist/` directory. All build configuration is done in `tup.config`. All source configuration is done in `conf.h` files in the utility/function's directory, don't worry this will change in the future for obvious reasons.
+The system should be built into the `./dist/` directory. All configuration is done in `tup.config`.
 
 
 # Source Tree Organization

@@ -3,10 +3,29 @@
 #include <errno.h>
 #include <string.h>
 #include <signal.h>
-#include "conf.h"
 
 #define FLAG_ERROR   0b01
 #define FLAG_PARSING 0b10
+
+#ifndef BUFF_SIZE
+#   warning "/usr.bin/tee: BUFF_SIZE not set, defaulting to 4096"
+#   define BUFF_SIZE 4096
+#endif
+
+#ifndef MAX_FILES
+#   warning "/usr.bin/tee: MAX_FILES not set, defaulting to 13"
+#   define MAX_FILES 13
+#endif
+
+#if MAX_FILES < 13
+#   warning "/usr.bin/tee: POSIX mandates a minimum of 13 files"
+#endif
+
+#define DEFAULT_SELF "/usr/bin/tee"
+#define CAT_ERROR "%s: Cannot open current locale message catalogue, errno %d: %s\n"
+#define UNKNOWN_OPTION "%s: Unknown option `-%c'\n"
+#define CANNOT_OPEN "%s: Cannot open file `%s' for writing, errno %d: %s\n"
+
 
 int 
 main (const int argc, const char **argv)
