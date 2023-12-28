@@ -3,6 +3,13 @@
 char *
 strchr (const char *s, int c)
 {
+#ifdef RESILIENT
+    if (!s)
+    {
+        return (char*)s;
+    }
+#endif
+
     do
     {
         if (*s == (char)c)
@@ -17,6 +24,13 @@ strchr (const char *s, int c)
 char *
 strrchr (const char *s, int c)
 {
+#ifdef RESILIENT
+    if (!s)
+    {
+        return (char*)s;
+    }
+#endif
+
     char *found = (char*)NULL;
     do
     {

@@ -11,11 +11,15 @@
 int
 main (const int argc, const char **argv)
 {
+#ifdef RESILIENT
     const char *self = DEFAULT_SELF;
     if (argc > 0)
     {
         self = argv[0];
     }
+#else
+    const char *self = argv[0];
+#endif
 
     FILE *fp;
 

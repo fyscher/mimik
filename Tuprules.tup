@@ -25,6 +25,10 @@ CFLAGS+=-g -O0
 LDFLAGS+=-O0
 endif
 
+ifeq (@(RESILIENT),y)
+CFLAGS+=-D RESILIENT
+endif
+
 # Dirs
 DIST:=$(TUP_CWD)/dist/
 

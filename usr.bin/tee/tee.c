@@ -8,16 +8,18 @@
 #define FLAG_ERROR   0b01
 #define FLAG_PARSING 0b10
 
-nl_catd catd;
-const char *self = DEFAULT_SELF;
-
 int 
 main (const int argc, const char **argv)
 {
+#ifdef RESILIENT
+    const char *self = DEFAULT_SELF;
     if (argc > 0)
     {
         self = argv[0];
     }
+#else
+    const char *self = argv[0];
+#endif
 
     setbuf(stdout, (char*)NULL);
 
@@ -26,7 +28,7 @@ main (const int argc, const char **argv)
 
     unsigned char flags = FLAG_PARSING;
 
-    catd = catopen("tee", 0);
+    nl_catd catd = catopen("tee", 0);
     if (catd == (nl_catd)-1)
     {
         fprintf(stderr, CAT_ERROR, self, errno, strerror(errno));

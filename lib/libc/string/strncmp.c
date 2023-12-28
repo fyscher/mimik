@@ -4,6 +4,21 @@
 int
 strncmp (const char *restrict s1, const char *restrict s2, size_t n)
 {
+#ifdef RESILIENT
+    if (!s1 && !s2)
+    {
+        return 0;
+    }
+    if (!s1)
+    {
+        return -1;
+    }
+    if (!s2)
+    {
+        return 1;
+    }
+#endif
+
     while (*s1 == *s2 && n)
     {
         if (!*s1)

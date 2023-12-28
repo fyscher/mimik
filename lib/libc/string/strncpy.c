@@ -11,6 +11,13 @@ strncpy (char *restrict dst, const char *restrict src, size_t n)
 char *
 stpncpy (char *restrict dst, const char *restrict src, size_t n)
 {
+#ifdef RESILIENT
+    if (!dst || !src)
+    {
+        return dst;
+    }
+#endif
+
     while (*src && n)
     {
         *dst = *src;

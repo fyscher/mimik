@@ -3,6 +3,21 @@
 int
 strcmp (const char *restrict s1, const char *restrict s2)
 {
+#ifdef RESILIENT
+    if (!s1 && !s2)
+    {
+        return 0;
+    }
+    if (!s1)
+    {
+        return -1;
+    }
+    if (!s2)
+    {
+        return 1;
+    }
+#endif
+
     while (*s1 == *s2)
     {
         if (!*s1)
