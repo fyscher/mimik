@@ -1,3 +1,3 @@
-# /share/<locale>/man1/
+# `/share/<locale>/man1/`
 
 Utility manual pages

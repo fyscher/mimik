@@ -1,3 +1,3 @@
-# share/<locale>/messages/
+# `/share/<locale>/messages/`
 
 Message catalogues

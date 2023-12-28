@@ -1,3 +1,3 @@
-# etc
+# `/etc/`
 
 System-wide configuration
