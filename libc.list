@@ -1001,7 +1001,6 @@ strftime_l
 strncasecmp
 strncasecmp_l
 strndup
-strpbrk
 strptime
 strsignal
 strspn

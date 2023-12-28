@@ -3,6 +3,6 @@ DIR=/usr/share/locale/en_CA.ascii/man/man3/
 
 ifeq (@(BUILD_MANUALS),y)
 ifeq (@(LOCALE_EN_CA_ASCII),y)
-: foreach * ^Tupfile |> !txtdst |> $(DIST)$(DIR)%b$(COMP_END)
+: foreach * ^Tupfile ^README.md |> !txtdst |> $(DIST)$(DIR)%b$(COMP_END)
 endif
 endif
