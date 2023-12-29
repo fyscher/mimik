@@ -55,9 +55,13 @@ strrchr (const char *s, int c);
 char *
 strpbrk (const char *s1, const char *s2);
 
-// string/memcmp
+// string/memcmp.c
 int 
 memcmp (const void *s1, const void *s2, size_t n);
+
+// string/memset.c
+void *
+memset (void *s, int c, size_t n);
 
 #ifdef __cplusplus
 }
