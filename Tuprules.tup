@@ -29,6 +29,10 @@ ifeq (@(RESILIENT),y)
 CFLAGS+=-D RESILIENT
 endif
 
+ifeq (@(STATIC),y)
+CFLAGS+=-static
+endif
+
 # Dirs
 DIST:=$(TUP_CWD)/dist/
 
