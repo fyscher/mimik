@@ -13,7 +13,7 @@ strcmp - Compare the value of two strings, part of libc
 ```C
 #include <string.h>
 
-int strcmp (const char *restrict s1, const char *restrict s2);
+int strcmp (const char *s1, const char *s2);
 ```
 
 

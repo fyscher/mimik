@@ -10,11 +10,11 @@ extern "C"
 
 // string/strcmp.c
 int 
-strcmp (const char *restrict s1, const char *restrict s2);
+strcmp (const char *s1, const char *s2);
 
 // string/strncmp.c
 int
-strncmp (const char *restrict s1, const char *restrict s2, size_t n);
+strncmp (const char *s1, const char *s2, size_t n);
 
 // string/strcpy.c
 char *
@@ -56,7 +56,8 @@ char *
 strpbrk (const char *s1, const char *s2);
 
 // string/memcmp
-int memcmp (const void *s1, const void *s2, size_t n);
+int 
+memcmp (const void *s1, const void *s2, size_t n);
 
 #ifdef __cplusplus
 }

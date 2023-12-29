@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 int
-strncmp (const char *restrict s1, const char *restrict s2, size_t n)
+strncmp (const char *s1, const char *s2, size_t n)
 {
 #ifdef RESILIENT
     if (!s1 && !s2)

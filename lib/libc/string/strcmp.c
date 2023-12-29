@@ -1,7 +1,7 @@
 #include "string.h"
 
 int
-strcmp (const char *restrict s1, const char *restrict s2)
+strcmp (const char *s1, const char *s2)
 {
 #ifdef RESILIENT
     if (!s1 && !s2)

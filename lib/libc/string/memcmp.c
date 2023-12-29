@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 int
-memcmp (const void *restrict s1, const void *restrict s2, size_t n)
+memcmp (const void *s1, const void *s2, size_t n)
 {
 #ifdef RESILIENT
     if (!s1 && !s2)

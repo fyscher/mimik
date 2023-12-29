@@ -13,7 +13,7 @@ strncmp - Compare two fixed length strings, part of libc
 ```C
 #include <string.h>
 
-int strncmp (const char *restrict s1, const char *restrict s2, size_t n);
+int strncmp (const char *s1, const char *s2, size_t n);
 ```
 
 
