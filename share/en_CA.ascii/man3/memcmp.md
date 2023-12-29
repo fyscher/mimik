@@ -5,7 +5,7 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-strncmp - Compare two fixed length strings, part of libc
+memcmp - Compare data in memory, part of libc
 
 
 # Synopsis
@@ -13,15 +13,15 @@ strncmp - Compare two fixed length strings, part of libc
 ```C
 #include <string.h>
 
-int strncmp (const char *restrict s1, const char *restrict s2, size_t n);
+int memcmp (const void *s1, const void *s2, size_t n);
 ```
 
 
 # Description
 
-The string values of *s1* and *s2* shall be compared, if they are equal then zero shall be return. 
-If the strings are not equal then the return value shall be positive if *s1* is lexicographically larger than *s2*, and vise versa for negative.
-`strncmp` shall not compare more than *n* bytes from *s1* nor *s2*.
+The values, interpreted as **unsigned char**, of *s1* and *s2* shall be compared, if they are equal then zero shall be return. 
+If the lists are not equal then the return value shall be positive if *s1* is lexicographically larger than *s2*, and vise versa for negative.
+`memcmp` shall not compare more than *n* bytes from *s1* nor *s2*.
 
 
 # Environment Variables
@@ -54,5 +54,3 @@ Copyright (c) 2001-2018 IEEE and The Open Group
 
 
 # See Also
-
-[strcmp](strcmp.3) - The sister function to `strncmp`, for non-fixed length strings

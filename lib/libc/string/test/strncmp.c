@@ -13,13 +13,13 @@ main (void)
 
     if (strncmp("Same1", "Same0", 5) <= 0)
     {
-        puts("libc/strncmp 16: does not return less than zero on greater s1");
+        puts("libc/strncmp 16: does not return more than zero on greater s1");
         err = 1;
     }
 
     if (strncmp("Same0", "Same1", 5) >= 0)
     {
-        puts("libc/strncmp 22: does not return more than zero on lesser s1");
+        puts("libc/strncmp 22: does not return less than zero on lesser s1");
         err = 1;
     }
 

@@ -1,6 +1,7 @@
 #ifndef __LIBC_STRING_H__
 #define __LIBC_STRING_H__
 #include <stddef.h>
+#include <locale.h>
 
 #ifdef __cplusplus
 extern "C"
@@ -53,6 +54,9 @@ strrchr (const char *s, int c);
 // string/strpbrk.c
 char *
 strpbrk (const char *s1, const char *s2);
+
+// string/memcmp
+int memcmp (const void *s1, const void *s2, size_t n);
 
 #ifdef __cplusplus
 }
