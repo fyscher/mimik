@@ -41,6 +41,7 @@ DIST:=$(TUP_CWD)/dist/
 !ccld   = |> $(CC) $(CFLAGS) -o %o %f             |>
 !gencat = |> gencat %o %f                         |>
 !exmv   = |> install -Dm755 %f %o                 |>
+!mv     = |> cp %f %o                             |>
 !ldso   = |> $(LD) $(LDFLAGS) --shared %f -o %o   |>
 !ar     = |> $(AR) rcs $(ARFLAGS) %o %f           |>
 !cc     = |> $(CC) $(CFLAGS) -c -o %o %f          |>
