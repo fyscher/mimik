@@ -63,6 +63,10 @@ memcmp (const void *s1, const void *s2, size_t n);
 void *
 memset (void *s, int c, size_t n);
 
+// string/memcpy.c
+void *
+memcpy (void *restrict dst, const void *restrict src, size_t n);
+
 #ifdef __cplusplus
 }
 #endif
