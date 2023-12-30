@@ -9,7 +9,7 @@ The goal of Mimik is to provide a completely free, and open, collection of every
 
 # Building
 
-Mimik uses [Tup](gittup.org) for its build system.
+Mimik uses [Tup](https://gittup.org/tup) for its build system.
 
 Just run:
 
