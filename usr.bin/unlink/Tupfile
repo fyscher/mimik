@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(USR_BIN_UNLINK),y)
 : unlink.c |> !ccld |> $(DIST)/usr/bin/unlink
+endif

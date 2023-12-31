@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(BIN_CAT),y)
 : cat.c |> !ccld -D BUFF_SIZE=@(BIN_CAT_BUFF_SIZE) |> $(DIST)/bin/cat
+endif 

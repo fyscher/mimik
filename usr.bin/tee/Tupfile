@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(USR_BIN_TEE),y)
 : tee.c |> !ccld -D MAX_FILES=@(USR_BIN_TEE_MAX_FILES) -D BUFF_SIZE=@(USR_BIN_TEE_BUFF_SIZE) |> $(DIST)/usr/bin/tee
+endif

@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(USR_BIN_LINK),y)
 : link.c |> !ccld |> $(DIST)/usr/bin/link
+endif

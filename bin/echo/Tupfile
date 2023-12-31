@@ -1,3 +1,5 @@
 include_rules
 
+ifeq (@(BIN_ECHO),y)
 : echo.c |> !ccld |> $(DIST)/bin/echo
+endif

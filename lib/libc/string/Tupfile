@@ -1,5 +1,7 @@
 include_rules
 
+ifeq (@(LIB_C_STRING),y)
 ifeq (@(BUILD_INCLUDES),y)
  : foreach *.h |> !mv |> $(DIST)/usr/include/%b
+endif
 endif
