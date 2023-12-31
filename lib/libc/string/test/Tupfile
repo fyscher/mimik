@@ -1,9 +1,7 @@
 include_rules
 
 ifeq (@(LIB_C),y)
-ifeq (@(LIB_C_STRING),y)
 ifeq (@(BUILD_TESTS),y)
 : foreach *.c |> !ccld -fno-builtin |> $(DIST)/usr/test/libc/%B
-endif
 endif
 endif
