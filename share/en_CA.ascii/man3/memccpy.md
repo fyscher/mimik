@@ -5,21 +5,21 @@ This manual is part of the Mimik System Tree, other implementations may differ. 
 
 # Name
 
-memcpy - Copy data from memory, part of libc
+memccpy - Copy data from memory stopping at a given character, part of libc
 
 # Synopsis
 
 ```C
 #include <string.h>
 
-void *memcpy (void *restrict dst, const void *restrict src, size_t n);
+void *memccpy (void *restrict dst, const void *restrict src, int c, size_t n);
 ```
 
 
 # Description
 
-`memcpy` shall copy the contents of buffer *src* to buffer *dst*. The function shall only copy *n* bytes. `memcpy` shall return *dst*. The user shall be responsible for the allocation of the buffer *dst*, its size being that of *n* bytes.
-
+`memccpy` shall copy the contents of buffer *src* to buffer *dst*. The function shall only copy at most *n* bytes. `memccpy` shall stop at the first occurrence of *c*, interpreted as an **unsigned char**.
+The user shall be responsible for the allocation of the buffer *dst*, its size being that of *n* bytes. `memccpy` shall return a pointer to the character after the first occurrence of *c*, or NULL if *c* was not found.
 
 # Environment Variables
 
@@ -52,4 +52,4 @@ Copyright (c) 2001-2018 IEEE and The Open Group
 
 # See Also
 
-[memccpy](memccpy.3) - The sister function to `memcpy`, but with character detection and stopping
+[memcpy](memcpy.3) - The sister function to `memccpy`, but without the *c* stopping functionality

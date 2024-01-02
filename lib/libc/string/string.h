@@ -71,6 +71,10 @@ memcpy (void *restrict dst, const void *restrict src, size_t n);
 void *
 memchr (const void *s, int c, size_t n);
 
+// string/memccpy.c
+void *
+memccpy (void *restrict dst, const void *restrict src, int c, size_t n);
+
 #ifdef __cplusplus
 }
 #endif

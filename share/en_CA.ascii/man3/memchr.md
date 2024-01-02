@@ -18,7 +18,7 @@ void *memchr (const void *s, int c, size_t n);
 
 # Description
 
-`memchr` shall return a point to the first occurrence of *c*, interpreted as an **unsigned char**, in buffer *s*. `memchr` shall not read more than *n* bytes from *s*. A NULL pointer shall be returned if no occurrence of *c* is found in the first *n* bytes of *s*.
+`memchr` shall return a pointer to the first occurrence of *c*, interpreted as an **unsigned char**, in buffer *s*. `memchr` shall not read more than *n* bytes from *s*. A NULL pointer shall be returned if no occurrence of *c* is found in the first *n* bytes of *s*.
 
 
 # Environment Variables
