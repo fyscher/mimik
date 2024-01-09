@@ -1,0 +1,2 @@
+include_rules
+ : true.c |> !ccld |> $(DIST)/bin/true
