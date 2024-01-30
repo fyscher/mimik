@@ -10,26 +10,24 @@ false - Exits false
 
 # Synopsis
 
-`false [-e] [error]`
+`false [error]`
 
 
 # Description
 
-The `false` utility shall exit false.
+The *false* utility shall exit false.
 
 
 # Options
 
-## -e
-
-This utility will interpret error as an errno name.
+The *false* utility shall not parse any options.
 
 
 # Operands
 
 ## error
 
-Error will be the returned exit status; by default is interpreted as an integer, unless the -e option is given it will be interpreted as an errno name.
+Error will be the returned exit status as a positive integer.
 
 
 # Environment Variables
