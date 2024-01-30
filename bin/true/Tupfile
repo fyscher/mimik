@@ -1,2 +1,5 @@
 include_rules
- : true.c |> !ccld |> $(DIST)/bin/true
+
+ifeq (@(BIN_TRUE),y)
+: true.c |> !ccld |> $(DIST)/bin/true
+endif
